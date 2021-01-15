@@ -6,7 +6,7 @@
   </div>
 </template> 
 
-<script lang="ts">
+<script lang="ts" >
 import { Options, Vue } from 'vue-class-component';
 import BasicDisplay from '@/components/basicValue.vue'; // @ is an alias to /src
 
