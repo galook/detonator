@@ -4,7 +4,7 @@
     <p class="font-bold text-6xl mb-16 text-gray-800"></p>
     <BasicDisplay v-for="(infoArray, index) in info" :key="index" :title="infoArray[0]" :content="infoArray[1]" />
   </div>
-</template>
+</template> 
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
