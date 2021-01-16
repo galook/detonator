@@ -1,4 +1,4 @@
-# detonator
+# Quvia Detonator
 
 ## Project setup
 ```
