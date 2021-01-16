@@ -1,38 +1,46 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import View from '../views/View.vue'
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import View from "../views/View.vue";
+
+const pageNames = ["Create", "Edit"];
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
-    name: 'View',
-    component: View
+    path: "/",
+    name: "View",
+    component: View,
+    children: [
+      {
+        path: ":no",
+        name: "ViewNum",
+        component: View,
+      },
+    ],
   },
-  {
-    path: '/num/:no',
-    name: 'h',
-    component: View
-  },
-  {
-    path: '/create/:no',
-    name: 'Create',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('../views/Create.vue')
-  },
-  {
-    path: '/edit/:no',
-    name: 'Edit',
-    
-    // which is lazy-loaded when the route is visited.
-    component: () => import('../views/Edit.vue')
-  },
-]
+];
 
+pageNames.forEach((pageName) => {
+  routes.push({
+    path: `/${pageName.toLowerCase()}`,
+    name: `${pageName}`,
+    component: () => import(`../views/${pageName}.vue`),
+    children: [
+      {
+        path: `:no`,
+        name: `${pageName}Num`,
+        component: () => import(`../views/${pageName}.vue`),
+      },
+    ],
+  });
+});
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
+
+// route level code-splitting
+// this generates a separate chunk (about.[hash].js) for this route
+// which is lazy-loaded when the route is visited.
+// component: () => import('../views/Create.vue')
