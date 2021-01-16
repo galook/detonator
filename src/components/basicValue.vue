@@ -1,8 +1,10 @@
 <template>
   <div class="View">
     <div class="mb-2">
+      
       <span class="text-3xl font-bold mr-2">{{ title }}: </span>
       <span class="text-2xl m-auto">{{ content }}</span>
+
     </div>
   </div>
 </template>
