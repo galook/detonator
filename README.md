@@ -16,4 +16,4 @@ npm run build
 ```
 
 
-Made by galook @ Quvia[https://quvia.cz]
+Made by galook@[Quvia](https://quvia.cz)
