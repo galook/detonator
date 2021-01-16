@@ -1,9 +1,10 @@
 <template>
   <div id="nav">
     <router-link to="/">View</router-link> |
-    <router-link to="/create">Create</router-link>
+    <router-link to="/create">Create</router-link> |
+    <router-link to="/edit">Edit</router-link>
   </div>
-  <router-view/>
+  <router-view />
 </template>
 
 <style lang="scss">
