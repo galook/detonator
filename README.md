@@ -5,20 +5,15 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Development localhost:8080
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Create production bundle
 ```
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Made by galook @ Quvia[https://quvia.cz]
