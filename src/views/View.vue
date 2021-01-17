@@ -32,10 +32,7 @@ export default class View extends Vue {
   number?: number
  
   mounted() {
-    if (this.$route.params.no) {
-      console.log(this.$route.params.no, 'lol');
-      
-    }
+    this.$emit('route', this.$route.params)
   }
 }
 </script>

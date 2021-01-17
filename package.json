@@ -10,6 +10,7 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "@tailwindcss/postcss7-compat": "^2.0.2",
+    "@types/sweetalert": "^2.0.4",
     "autoprefixer": "^9.8.6",
     "core-js": "^3.6.5",
     "postcss": "^7.0.35",
