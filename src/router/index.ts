@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import View from "../views/View.vue";
 
 const pageNames = ["Create", "Edit"];
@@ -10,9 +10,9 @@ const routes: Array<RouteRecordRaw> = [
     component: View,
     children: [
       {
-        path: ":no",
-        name: "ViewNum",
-        component: View,
+        path: "/:no",
+        name: "Show",
+        component: () => import(`../views/View.vue`),
       },
     ],
   },
@@ -34,7 +34,7 @@ pageNames.forEach((pageName) => {
 });
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 });
 
